@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOJA MM2</title>
+    <link rel="shortcut icon" href="src/images/icons/LOGO.webp" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="src/images/Backgrounds/Background.webp" alt="background" id="background-image">
+        <div id="main-header-container">
+            <h1>LOJA MM2</h1>
+            <button id="menu-toggle" aria-label="Abrir Menu">☰</button>
+            <nav id="menu">
+                <ul><button class="scrollToSection" data-target="#main-header-container">Inicio</button></ul>
+                <ul><button class="scrollToSection" data-target="#shop-container">Produtos</button></ul>
+                <ul><button class="scrollToSection" data-target="#shop-knives">Categorias</button></ul>
+                <ul><button class="scrollToSection" data-target="#faq-container">Suporte</button></ul>
+            </nav>
+            <div>
+                <button id="cart-button">
+                    <img src="src/images/icons/cart.png" alt="IMAGEM DE CESTA" style="width: 100%; height: 100%;">
+                    <p id="cart-quantity-items">0</p>
+                </button>
+
+                <div id="cart-container">
+                    <h1>SEU CARRINHO</h1>
+                    <div id="products-container"></div>
+                
+                    <div id="ended-container">
+                        <button id="end-buy">FINALIZAR</button>
+                        <p id="total-price">TOTAL: R$ 0.00</p>
+                    </div>
+                </div>                
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="image-container"> <h1 class="highlight">[⭐] TOP VENDIDOS [⭐]</h1><div class="image-track-wrapper"><div class="image-track"></div></div></div>
+
+        <div id="shop-container">
+            <h1>🔪 LOJA MM2</h1>
+            <div id="interactive-buttons">
+                <input type="text" id="search-input" placeholder="Pesquisar produtos..." />
+                <button id="filter-button"><img src="src/images/icons/filter.png"></button>
+            </div>
+            <div id="filter-panel">
+                <div>
+                    <h2>FILTRAR PREÇOS</h2>
+                    <label>
+                        <input type="number" id="min-price" placeholder="MENOR VALOR. EX.: 10">
+                    </label>
+                    <label>
+                        <input type="number" id="max-price" placeholder="MAIOR VALOR. EX.: 999">
+                    </label>
+                    <button id="apply-filter">Aplicar Filtro</button>
+                </div>
+            </div>
+
+            <div id="shop-products-container">
+            </div>
+        </div>
+
+        <div id="shop-knives">
+            <h1>[🔪] - TODAS AS FACAS</h1>
+            <div class="slider-wrapper">
+                <button class="slider-btn left-btn"><img style="transform: scale(-1);" src="src/images/icons/arrow.png"></button>
+                <div id="shop-knives-container" class="slider-container"></div>
+                <button class="slider-btn right-btn"><img src="src/images/icons/arrow.png"></button>
+            </div>
+        </div>
+        <div id="shop-guns">
+            <h1>[🔫] - TODAS AS ARMAS</h1>
+            <div class="slider-wrapper">
+                <button class="slider-btn left-btn"><img style="transform: scale(-1);" src="src/images/icons/arrow.png"></button>
+                <div id="shop-guns-container" class="slider-container"></div>
+                <button class="slider-btn right-btn"><img src="src/images/icons/arrow.png"></button>
+            </div>
+        </div>  
+    </main>
+    
+    <div id="faq-container">
+        <h1>FAQ</h1>
+        <div>
+            <div class="dropdown">
+                <h1 class="dropdown-title">SOMOS CONFIAVEIS?</h1>
+                <div class="dropdown-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro a explicabo consequatur officiis dolores assumenda. Culpa hicinventore vitae nam vero, doloribus laborum nulla minima officiis deserunt cumque. Voluptatibus, amet! Lorem ipsum dolor sit amet,consectetur adipisicing elit. Non accusantium consequatur tempore, sapiente, corporis saepe magni fuga, ipsam excepturi laudantiumquod. Ipsa error asperiores corporis? Animi quod velit blanditiis alias.</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <h1 class="dropdown-title">PRECISA DE SUPORTE?</h1>
+                <div class="dropdown-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptates dolor quam labore tempore, a officia, sequi,quisquam quae error ex. Explicabo accusantium repudiandae minima. Nulla nesciunt explicabo accusamus nostrum. Lorem ipsum dolor sitamet consectetur adipisicing elit. Blanditiis esse quibusdam possimus aut nemo magni autem et ab laborum eveniet quas porrorepudiandae, cumque id tempora perspiciatis velit nostrum non?</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <h1 class="dropdown-title">COMO COMPRO?</h1>
+                <div class="dropdown-content">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod nemo in dicta delectus cum vitae incidunt velit natus eos ametlaudantium, nostrum dolor numquam itaque fuga sed accusamus. Voluptas, voluptatibus? Lorem ipsum dolor sit amet, consecteturadipisicing elit. Ut soluta aspernatur recusandae dolorum. Ipsa vel ab laudantium nobis. Consequatur fugiat quaerat est veritatislaborum temporibus voluptates repudiandae. Provident, alias beatae?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h1>WEBSITE FEITO POR LUCIO</h1>
+        <p>WEBSITE FEITO 100% COM O INTUITO DE APRENDIZADO, NADA AQUI DENTRO ESTA REALMENTE A VENDA, TUDO É 100% MERAMENTE ILUSTRATIVO. CASO DESEJE QUE ESTE WEBSITE FUNCIONE, ADQUIRA UM WEBSITE OLHANDO OS PREÇOS <a href="https://lucasemanoeldeoliveira.github.io/Portifolio/" target="_blank">AQUI</a>.</p>
+        <p>Fique com Deus, e até a próxima !!</p>
+        <br>
+        <p>LUCIO © 2024</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.scrollToSection').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetSection = document.querySelector(button.getAttribute('data-target'));
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+    <script src="productsCreation.js"></script>
+</body>
+</html>
