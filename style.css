@@ -827,6 +827,11 @@ footer {
     font-size: 16px;
 }
 
+#confirmation-container.show {
+    transform: scale(1);
+}
+
+
 @keyframes scrollWithFloating {
     0% {
         transform: translateX(0) translateY(0);

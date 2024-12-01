@@ -174,3 +174,77 @@ document.querySelectorAll('.dropdown-title').forEach(function(title) {
         }
     });
 });
+
+
+document.getElementById('end-buy').addEventListener('click', function() {
+    // Criar o overlay que cobre a tela
+    const modalOverlay = document.createElement('div');
+    modalOverlay.id = 'modal-overlay';
+    modalOverlay.style.position = 'fixed';
+    modalOverlay.style.top = 0;
+    modalOverlay.style.left = 0;
+    modalOverlay.style.width = '100%';
+    modalOverlay.style.height = '100%';
+    modalOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; // Fundo semitransparente
+    modalOverlay.style.display = 'flex';
+    modalOverlay.style.justifyContent = 'center';
+    modalOverlay.style.alignItems = 'center';
+    modalOverlay.style.zIndex = 1000;
+
+    // Criar o container de confirmação
+    const confirmationContainer = document.createElement('div');
+    confirmationContainer.id = 'confirmation-container';
+    confirmationContainer.style.padding = '20px';
+    confirmationContainer.style.backgroundColor = 'white';
+    confirmationContainer.style.border = '2px solid #ccc';
+    confirmationContainer.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.5)';
+    confirmationContainer.style.maxWidth = '300px'
+    confirmationContainer.style.borderRadius = '10px';
+    confirmationContainer.style.textAlign = 'center';
+    confirmationContainer.style.transform = 'scale(0)';
+    confirmationContainer.style.transition = 'transform 0.5s ease-in-out';
+
+    const h1 = document.createElement('h1');
+    h1.textContent = '✋ ESPERE AI !';
+    confirmationContainer.appendChild(h1);
+
+    const p = document.createElement('p');
+    p.innerHTML = 'Este não é um Website 100% funcional, e sim um Website Modelo (para clientes escolher este modelo para sua loja), nenhum produto aqui está a venda realmente. Caso deseje comprar um Website igual a este, e funcional, você deve comprar com Lucio!!';
+    confirmationContainer.appendChild(p);
+
+    // Botão para redirecionar
+    const redirectBtn = document.createElement('button');
+    redirectBtn.textContent = 'Comprar Website';
+    redirectBtn.style.margin = '5px';
+    redirectBtn.style.padding = '10px 20px';
+    redirectBtn.style.cursor = 'pointer';
+    redirectBtn.addEventListener('click', function() {
+        window.open('https://lucasemanoeldeoliveira.github.io/Portifolio/', '_blank');
+    });    
+    confirmationContainer.appendChild(redirectBtn);
+
+    // Botão para fechar o container
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = 'Fechar';
+    closeBtn.style.margin = '5px';
+    closeBtn.style.padding = '10px 20px';
+    closeBtn.style.cursor = 'pointer';
+    closeBtn.addEventListener('click', function() {
+        confirmationContainer.classList.remove('show');
+        setTimeout(() => {
+            modalOverlay.remove();
+        }, 500); // Tempo para a animação de desaparecimento
+    });
+    confirmationContainer.appendChild(closeBtn);
+
+    // Adicionar o container de confirmação ao overlay
+    modalOverlay.appendChild(confirmationContainer);
+
+    // Adicionar o overlay ao body
+    document.body.appendChild(modalOverlay);
+
+    // Exibir o container com animação
+    setTimeout(() => {
+        confirmationContainer.style.transform = 'scale(1)';
+    }, 10);
+});
